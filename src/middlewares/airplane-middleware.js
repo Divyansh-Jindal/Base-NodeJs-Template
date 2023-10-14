@@ -7,7 +7,7 @@ function validateCreateRequest(req,res,next){
         ErrorResponse.error = {explanation: 'Model Number not found in the oncoming request in correct form'};
         return res
                 .status(StatusCodes.BAD_REQUEST)
-                .json(ErrorResponse);
+                .json(ErrorResponse); 
     }
     next();
 }
