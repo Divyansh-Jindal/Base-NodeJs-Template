@@ -9,12 +9,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      modelNumber: {
+      modelNumber:  {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       capacity: {
         type: Sequelize.INTEGER,
         defaultValue:0,
+        validate:{
+          max:1000
+        }
       },
       createdAt: {
         allowNull: false,
