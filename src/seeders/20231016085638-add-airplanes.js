@@ -15,14 +15,14 @@ module.exports = {
 
     await queryInterface.bulkInsert('Airplanes', [
       {
-        modelNumber: 'airbus340',
-        capacity: 900,
+        modelNumber: 'airbus360',
+        capacity: 800,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        modelNumber: 'boeing777',
-        capacity: 450,
+        modelNumber: 'boeing766',
+        capacity: 550,
         createdAt: new Date(),
         updatedAt: new Date()
       }]
