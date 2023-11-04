@@ -11,6 +11,6 @@ app.use('/api',apiRoutes);
 app.listen(ServerConfig.PORT,()=>{
     console.log(`Successfully started the server on Port: ${ServerConfig.PORT}`);
     // bad code alert
-    const { City, Airport } = require('./models');
+    // const { City, Airport } = require('./models');
     
 });
