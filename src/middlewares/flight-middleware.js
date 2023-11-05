@@ -18,6 +18,13 @@ function validateCreateRequest(req,res,next){
                 .status(StatusCodes.BAD_REQUEST)
                 .json(ErrorResponse);
     }
+    if(req.body.arrivalAirportId == req.body.departureAirportId) {
+        ErrorResponse.message = 'Something went wrong while creating flight';
+        ErrorResponse.error = new AppError(['arrivalAirportId and departureAirportId cant be same'], StatusCodes.BAD_REQUEST);
+        return res
+                .status(StatusCodes.BAD_REQUEST)
+                .json(ErrorResponse);
+    }
     if(!req.body.departureAirportId) {
         ErrorResponse.message = 'Something went wrong while creating flight';
         ErrorResponse.error = new AppError(['departureAirportId not found in the oncoming request in the correct form'], StatusCodes.BAD_REQUEST);
