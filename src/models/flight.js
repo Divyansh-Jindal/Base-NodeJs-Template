@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false
     },
-    departureTIme: {
+    departureTime: {
       type: DataTypes.DATE,
       allowNull: false
     },
