@@ -3,12 +3,12 @@ const { FlightController } = require('../../controllers');
 const { FlightMiddlewares } =require('../../middlewares');
 const router = express.Router();
 
-///api/v1/flights POST
+// /api/v1/flights POST
 router.post('/', 
             FlightMiddlewares.validateCreateRequest,
             FlightController.createFlight);
 
-///api/v1/flights?trips=MUM-DEL GET
+// /api/v1/flights?trips=MUM-DEL GET
 router.get('/', 
             FlightController.getAllFlights);
 
@@ -16,12 +16,12 @@ router.get('/',
 router.get('/:id', 
             FlightController.getFlight);
 
-// ///api/v1/flights/:id PATCH
-// router.patch('/:id',
-//             AirplaneMiddlewares.validateCreateRequest,
-//             AirplaneController.updateAirplane);
+// /api/v1/flights/:id/seats PATCH
+router.patch('/:id/seats',
+            FlightMiddlewares.validateUpdateSeatsRequest,
+            FlightController.updateSeats);
 
-// ///api/v1/flights/:id DELETE
+// /api/v1/flights/:id DELETE
 // router.delete('/:id', 
 //             AirplaneController.destroyAirplane);
 
