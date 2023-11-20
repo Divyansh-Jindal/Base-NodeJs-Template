@@ -12,9 +12,9 @@ router.post('/',
 router.get('/', 
             FlightController.getAllFlights);
 
-// ///api/v1/flights/:id GET
-// router.get('/:id', 
-//             AirplaneController.getAirplane);
+////api/v1/flights/:id GET
+router.get('/:id', 
+            FlightController.getFlight);
 
 // ///api/v1/flights/:id PATCH
 // router.patch('/:id',
